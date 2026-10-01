@@ -1,4 +1,5 @@
 import './style.css'
+import { screenshots } from './media'
 
 type DownloadLink = {
   label: string
@@ -36,6 +37,15 @@ const downloadCards = downloads.map((item) => {
     </a>`
 }).join('')
 
+const screenshotCards = screenshots.map((shot, index) => `
+  <figure class="shot-card reveal" style="--shot-index:${index}">
+    <div class="phone-frame">
+      <img src="${shot.src}" alt="${shot.title} در Mojapp" loading="lazy" />
+    </div>
+    <figcaption>${shot.title}</figcaption>
+  </figure>
+`).join('')
+
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 app.innerHTML = `
@@ -49,6 +59,7 @@ app.innerHTML = `
       </a>
       <nav>
         <a href="#features">امکانات</a>
+        <a href="#screenshots">تصاویر برنامه</a>
         <a href="#download">دانلود</a>
         <a href="#faq">پرسش‌ها</a>
       </nav>
@@ -64,7 +75,7 @@ app.innerHTML = `
         <p>Mojapp یک موزیک‌پلیر فارسی مدرن با تمرکز روی سرعت، سادگی و تجربه شنیداری روان است؛ از جستجوی هنرمند تا کنترل پخش از نوتیفیکیشن.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#download">دانلود Mojapp</a>
-          <a class="button" href="#features">دیدن امکانات</a>
+          <a class="button" href="#screenshots">دیدن محیط برنامه</a>
         </div>
         <div class="trust-row"><span>✓ رابط فارسی</span><span>✓ مناسب اندروید</span><span>✓ طراحی مینیمال</span></div>
       </div>
@@ -91,6 +102,14 @@ app.innerHTML = `
       <div class="shell showcase reveal">
         <div class="showcase-copy"><span>هویت جدید Mojapp</span><h2>طراحی هماهنگ با موج موسیقی</h2><p>تم آبی و فیروزه‌ای صفحه از لوگوی رسمی برنامه گرفته شده تا تجربه دانلود و خود اپ یک هویت واحد داشته باشند.</p></div>
         <div class="waveform">${Array.from({ length: 44 }, (_, i) => `<i style="--i:${i}"></i>`).join('')}</div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="section screenshots-section">
+      <div class="shell">
+        <div class="section-heading reveal"><span>تصاویر واقعی برنامه</span><h2>داخل Mojapp را ببین</h2><p>این تصاویر مستقیماً از نسخه واقعی اپلیکیشن گرفته شده‌اند؛ خانه، هنرمندان، پخش، متن آهنگ و تنظیمات.</p></div>
+        <div class="shots-track">${screenshotCards}</div>
+        <div class="shots-hint reveal">← برای دیدن تصاویر بیشتر اسکرول کن →</div>
       </div>
     </section>
 
