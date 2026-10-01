@@ -1,17 +1,63 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#05070d" />
-    <meta name="description" content="دانلود Mojapp؛ موزیک‌پلیر مدرن فارسی برای اندروید" />
-    <title>Mojapp | دانلود موزیک‌پلیر</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/entry.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#05070d" />
+  <meta name="description" content="دانلود Mojapp؛ موزیک‌پلیر مدرن فارسی برای اندروید" />
+  <title>Mojapp | دانلود موزیک‌پلیر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Mojapp/src/style.css" />
+  <link rel="icon" href="/Mojapp/public/logo.svg" />
+  <style>
+    .reveal{opacity:1!important;transform:none!important}
+    .shots-track{scroll-padding-inline:12vw;scroll-snap-type:x mandatory!important}
+    .shot-card{scroll-snap-align:center!important}
+    @media(max-width:600px){.shots-track{grid-auto-columns:min(76vw,280px)!important;padding-inline:12vw!important}.shot-card{opacity:.8;transform:scale(.95);transition:.25s}.shot-card:hover{opacity:1;transform:scale(1)}}
+  </style>
+</head>
+<body>
+  <div class="page-glow glow-a"></div><div class="page-glow glow-b"></div>
+  <header class="site-header"><div class="shell nav">
+    <a class="brand" href="#top"><img src="/Mojapp/public/logo.svg" alt="لوگوی Mojapp"><span><b>Mojapp</b><small>موزیک‌پلیر</small></span></a>
+    <nav><a href="#features">امکانات</a><a href="#screenshots">تصاویر برنامه</a><a href="#download">دانلود</a><a href="#faq">پرسش‌ها</a></nav>
+    <a class="nav-cta" href="#download">دریافت برنامه</a>
+  </div></header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy reveal"><span class="pill"><i></i> تجربه‌ای تازه برای شنیدن موسیقی</span><h1>موسیقی را<br><em>با موج تازه‌ای</em> تجربه کن.</h1><p>Mojapp یک موزیک‌پلیر فارسی مدرن با تمرکز روی سرعت، سادگی و تجربه شنیداری روان است.</p><div class="hero-actions"><a class="button button-primary" href="#download">دانلود Mojapp</a><a class="button" href="#screenshots">دیدن محیط برنامه</a></div><div class="trust-row"><span>✓ رابط فارسی</span><span>✓ مناسب اندروید</span><span>✓ طراحی مینیمال</span></div></div>
+      <div class="hero-art reveal"><div class="sound-ring ring-one"></div><div class="sound-ring ring-two"></div><div class="logo-stage"><img src="/Mojapp/public/logo.svg" alt="لوگوی رسمی Mojapp"></div><div class="floating-card now-playing"><span class="dot"></span><div><small>اکنون در حال پخش</small><strong>Mojapp</strong></div><b>▶</b></div><div class="floating-card hi-res"><small>کیفیت پخش</small><strong>High Quality</strong></div></div>
+    </section>
+
+    <section id="features" class="section shell"><div class="section-heading reveal"><span>ویژگی‌ها</span><h2>همه‌چیز برای یک پخش روان 🎧</h2><p>امکانات اصلی بدون شلوغی و با طراحی مدرن.</p></div><div class="feature-grid">
+      <article class="feature-card reveal"><span class="feature-icon">♫</span><h3>پخش پس‌زمینه</h3><p>موسیقی در پس‌زمینه ادامه پیدا می‌کند.</p></article>
+      <article class="feature-card reveal"><span class="feature-icon">⌕</span><h3>جستجوی سریع</h3><p>آهنگ، آلبوم و هنرمند را سریع پیدا کن.</p></article>
+      <article class="feature-card reveal"><span class="feature-icon">◉</span><h3>صفحه هنرمند</h3><p>تمام آهنگ‌ها و آلبوم‌های هنرمند را یک‌جا ببین.</p></article>
+      <article class="feature-card reveal"><span class="feature-icon">▤</span><h3>صف پخش</h3><p>مدیریت سریع و ساده صف موسیقی.</p></article>
+      <article class="feature-card reveal"><span class="feature-icon">♬</span><h3>اعلان پخش</h3><p>کنترل موسیقی از نوتیفیکیشن اندروید.</p></article>
+      <article class="feature-card reveal"><span class="feature-icon">✦</span><h3>طراحی مدرن</h3><p>رابط مینیمال، سریع و هماهنگ با Mojapp.</p></article>
+    </div></section>
+
+    <section class="showcase-section"><div class="shell showcase reveal"><div class="showcase-copy"><span>هویت Mojapp</span><h2>طراحی هماهنگ با موج موسیقی</h2><p>تم آبی و فیروزه‌ای صفحه با هویت بصری برنامه هماهنگ شده است.</p></div><div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></section>
+
+    <section id="screenshots" class="section screenshots-section"><div class="shell"><div class="section-heading reveal"><span>تصاویر واقعی برنامه</span><h2>داخل Mojapp را ببین</h2><p>اسکرین‌شات‌های واقعی از نسخه فعلی برنامه.</p></div><div class="shots-track">
+      <figure class="shot-card reveal"><div class="phone-frame"><img src="/Mojapp/public/screenshots/Screenshot_2026-10-01-11-40-02-881_com.sahand.moj.jpg" alt="خانه Mojapp" loading="lazy"></div><figcaption>خانه</figcaption></figure>
+      <figure class="shot-card reveal"><div class="phone-frame"><img src="/Mojapp/public/screenshots/Screenshot_2026-10-01-11-40-07-750_com.sahand.moj.jpg" alt="متن آهنگ" loading="lazy"></div><figcaption>متن آهنگ</figcaption></figure>
+      <figure class="shot-card reveal"><div class="phone-frame"><img src="/Mojapp/public/screenshots/Screenshot_2026-10-01-11-40-14-249_com.sahand.moj.jpg" alt="کتابخانه" loading="lazy"></div><figcaption>کتابخانه</figcaption></figure>
+      <figure class="shot-card reveal"><div class="phone-frame"><img src="/Mojapp/public/screenshots/Screenshot_2026-10-01-16-13-49-604_com.sahand.moj.jpg" alt="هنرمند و آلبوم‌ها" loading="lazy"></div><figcaption>هنرمند و آلبوم‌ها</figcaption></figure>
+      <figure class="shot-card reveal"><div class="phone-frame"><img src="/Mojapp/public/screenshots/Screenshot_2026-10-01-16-14-09-628_com.sahand.moj.jpg" alt="در حال پخش" loading="lazy"></div><figcaption>در حال پخش</figcaption></figure>
+      <figure class="shot-card reveal"><div class="phone-frame"><img src="/Mojapp/public/screenshots/Screenshot_2026-10-01-16-15-32-642_com.sahand.moj.jpg" alt="تنظیمات" loading="lazy"></div><figcaption>تنظیمات</figcaption></figure>
+    </div><div class="shots-hint reveal">← برای دیدن تصاویر بیشتر اسکرول کن →</div></div></section>
+
+    <section id="download" class="section shell"><div class="section-heading reveal"><span>دانلود</span><h2>روش دریافت Mojapp را انتخاب کن</h2><p>نسخه مستقیم، مایکت و کافه‌بازار.</p></div><div class="download-grid reveal"><div class="store-card is-primary is-disabled"><span class="store-icon">↓</span><span class="store-copy"><strong>دانلود مستقیم</strong><small>به‌زودی فعال می‌شود</small></span></div><div class="store-card is-disabled"><span class="store-icon">M</span><span class="store-copy"><strong>دانلود از مایکت</strong><small>به‌زودی فعال می‌شود</small></span></div><div class="store-card is-disabled"><span class="store-icon">B</span><span class="store-copy"><strong>دانلود از کافه‌بازار</strong><small>به‌زودی فعال می‌شود</small></span></div></div></section>
+
+    <section id="faq" class="section shell faq-wrap"><div class="section-heading reveal"><span>پرسش‌های رایج</span><h2>قبل از دانلود</h2></div><div class="faq reveal"><details><summary>آیا Mojapp فارسی است؟</summary><p>بله، رابط برنامه برای کاربران فارسی‌زبان طراحی شده است.</p></details><details><summary>آیا برنامه در پس‌زمینه پخش می‌شود؟</summary><p>بله، کنترل پخش از اعلان اندروید در دسترس است.</p></details><details><summary>نسخه مستقیم از کجا دانلود می‌شود؟</summary><p>پس از قرار گرفتن APK رسمی، دکمه دانلود مستقیم فعال می‌شود.</p></details></div></section>
+
+    <section class="shell final-cta reveal"><img src="/Mojapp/public/logo.svg" alt="Mojapp"><div><span>Ready to play?</span><h2>موج موسیقی‌ات را شروع کن.</h2></div><a class="button button-primary" href="#download">دانلود Mojapp</a></section>
+  </main>
+  <footer><div class="shell"><div class="brand compact"><img src="/Mojapp/public/logo.svg" alt="Mojapp"><span><b>Mojapp</b><small>Music Player</small></span></div><p>© 2026 Mojapp</p></div></footer>
+</body>
 </html>
