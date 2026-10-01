@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#08090d" />
+  <meta name="description" content="دانلود اپلیکیشن Mojapp؛ موزیک پلیر مدرن با طراحی حرفه‌ای" />
+  <title>Mojapp | دانلود اپلیکیشن موسیقی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#07080b;--surface:#0f1117;--surface2:#151824;--text:#f7f8fb;--muted:#9da4b3;--line:rgba(255,255,255,.08);--a:#8b5cf6;--b:#22d3ee;--c:#fb7185;--shadow:0 28px 70px rgba(0,0,0,.42)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:"Vazirmatn",system-ui,sans-serif;background:radial-gradient(circle at 15% 10%,rgba(139,92,246,.16),transparent 28%),radial-gradient(circle at 85% 20%,rgba(34,211,238,.12),transparent 26%),linear-gradient(180deg,#07080b,#0a0b10 45%,#07080b);color:var(--text);overflow-x:hidden}
+    a{text-decoration:none;color:inherit} button{font:inherit}.container{width:min(1180px,calc(100% - 32px));margin:auto}.noise{position:fixed;inset:0;pointer-events:none;opacity:.05;z-index:99;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,8,11,.68);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:20px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;box-shadow:0 12px 30px rgba(139,92,246,.3)}.logo svg{width:24px}.navlinks{display:flex;gap:28px;color:var(--muted);font-size:14px}.navlinks a:hover{color:#fff}.mini{padding:10px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .hero{min-height:760px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:70px;padding:74px 0 46px;position:relative}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:9px 13px;border:1px solid rgba(139,92,246,.26);background:rgba(139,92,246,.08);border-radius:999px;font-size:13px;color:#d8ceff}.dot{width:7px;height:7px;border-radius:50%;background:var(--b);box-shadow:0 0 14px var(--b)}h1{font-size:clamp(44px,7vw,86px);line-height:1.03;margin:22px 0 18px;letter-spacing:-2px}.grad{background:linear-gradient(90deg,#fff 0%,#c8b7ff 43%,#79e7f4 100%);-webkit-background-clip:text;color:transparent}.lead{color:var(--muted);font-size:18px;line-height:2;max-width:650px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 20px;border-radius:17px;border:1px solid var(--line);font-weight:700;transition:.25s}.btn.primary{background:linear-gradient(135deg,var(--a),#6d5dfc 55%,var(--b));box-shadow:0 18px 45px rgba(109,93,252,.28)}.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.18)}.btn.disabled{opacity:.45;pointer-events:none}.btn svg{width:20px;height:20px}.hint{font-size:12px;color:#7d8491;margin-top:12px}
+    .visual{position:relative;min-height:590px;display:grid;place-items:center}.orb{position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.18),rgba(139,92,246,.22) 27%,rgba(34,211,238,.06) 58%,transparent 72%);filter:blur(.2px)}.ring{position:absolute;border:1px solid rgba(255,255,255,.08);border-radius:50%;animation:spin 18s linear infinite}.r1{width:510px;height:510px}.r2{width:390px;height:390px;animation-direction:reverse}.phone{width:285px;height:565px;border-radius:42px;background:linear-gradient(180deg,#161a25,#0b0d13);border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow),0 0 0 8px rgba(255,255,255,.025);padding:16px;position:relative;transform:rotate(-5deg)}.screen{height:100%;border-radius:30px;background:linear-gradient(180deg,#15121e,#0b0d12);padding:22px 18px;overflow:hidden}.toprow{display:flex;justify-content:space-between;color:#a9afba;font-size:12px}.cover{margin:46px auto 28px;width:190px;aspect-ratio:1;border-radius:28px;background:radial-gradient(circle at 40% 35%,#fba3c2,#9a5bf4 40%,#2dd4bf 80%);box-shadow:0 24px 65px rgba(139,92,246,.34);position:relative;overflow:hidden}.cover:after{content:"♪";position:absolute;inset:0;display:grid;place-items:center;font-size:80px;font-weight:900;color:rgba(255,255,255,.86)}.track{text-align:center}.track b{font-size:18px}.track span{display:block;color:#8f96a3;margin-top:6px;font-size:13px}.progress{height:4px;background:#292d37;border-radius:999px;margin:28px 0 10px;overflow:hidden}.progress i{display:block;width:62%;height:100%;background:linear-gradient(90deg,var(--a),var(--b))}.controls{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:24px}.play{width:66px;height:66px;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center;font-size:26px}.wave{position:absolute;display:flex;align-items:center;gap:5px;height:54px}.wave.left{left:-40px;top:110px}.wave.right{right:-36px;bottom:105px}.wave i{width:5px;border-radius:999px;background:linear-gradient(180deg,var(--b),var(--a));animation:beat 1.1s ease-in-out infinite}.wave i:nth-child(2){animation-delay:.1s}.wave i:nth-child(3){animation-delay:.2s}.wave i:nth-child(4){animation-delay:.3s}.wave i:nth-child(5){animation-delay:.4s}
+    section{padding:90px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 38px}.section-head h2{font-size:clamp(30px,5vw,48px);margin:0 0 12px}.section-head p{color:var(--muted);line-height:1.9}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:24px;padding:24px;transition:.25s}.card:hover{transform:translateY(-4px);border-color:rgba(139,92,246,.28)}.ico{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,rgba(139,92,246,.18),rgba(34,211,238,.13));display:grid;place-items:center;font-size:22px;margin-bottom:18px}.card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted);line-height:1.8;font-size:14px}.download-box{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}.store{padding:24px;border-radius:22px;background:#10131a;border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:15px}.store strong{display:block;font-size:17px}.store small{color:var(--muted)}.store-badge{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,#262b38,#141720);font-size:23px}.faq{max-width:820px;margin:auto;display:grid;gap:12px}.faq details{border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:18px;padding:18px 20px}.faq summary{cursor:pointer;font-weight:700}.faq p{color:var(--muted);line-height:1.9;margin-bottom:0}.cta{padding:70px 30px;border-radius:36px;border:1px solid rgba(255,255,255,.1);background:radial-gradient(circle at 20% 20%,rgba(139,92,246,.22),transparent 32%),radial-gradient(circle at 80% 80%,rgba(34,211,238,.13),transparent 28%),#0d1016;text-align:center}.cta h2{font-size:clamp(30px,5vw,50px);margin:0 0 10px}.cta p{color:var(--muted);margin-bottom:26px}footer{padding:28px 0 44px;color:#747b87;font-size:13px}.footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:26px}
+    @keyframes beat{0%,100%{height:12px;opacity:.45}50%{height:48px;opacity:1}}@keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:900px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:52px;gap:28px}.hero-copy{text-align:center}.lead{margin:auto}.actions{justify-content:center}.visual{min-height:520px;transform:scale(.9)}.grid,.download-box{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.container{width:min(100% - 22px,1180px)}.nav{height:68px}.mini{display:none}.hero{min-height:auto;padding-bottom:20px}.eyebrow{font-size:12px}h1{letter-spacing:-1px}.lead{font-size:15px}.actions{display:grid;grid-template-columns:1fr;width:100%}.btn{width:100%}.visual{min-height:470px;transform:scale(.78);margin:-26px 0}.grid,.download-box{grid-template-columns:1fr}section{padding:66px 0}.card{padding:20px}.cta{border-radius:26px;padding:48px 20px}.footer{flex-direction:column;text-align:center}}
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top"><span class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17V7l10-2v10" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5.2" cy="17.2" r="2.2" fill="white"/><circle cx="15.2" cy="15.2" r="2.2" fill="white"/></svg></span><span>Mojapp</span></a>
+      <nav class="navlinks"><a href="#features">امکانات</a><a href="#download">دانلود</a><a href="#faq">پرسش‌ها</a></nav>
+      <a class="mini" href="#download">دریافت برنامه</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><i class="dot"></i> تجربه‌ای تازه برای شنیدن موسیقی</span>
+        <h1><span class="grad">موسیقی، ساده‌تر<br>زیباتر، نزدیک‌تر.</span></h1>
+        <p class="lead">Mojapp یک تجربه مدرن و روان برای مدیریت و پخش موسیقی است؛ طراحی مینیمال، دسترسی سریع به هنرمندها و آهنگ‌ها و پخش بدون مزاحمت.</p>
+        <div class="actions">
+          <a id="directTop" class="btn primary" href="#download">دانلود مستقیم</a>
+          <a class="btn" href="#download">مایکت</a>
+          <a class="btn" href="#download">کافه بازار</a>
+        </div>
+        <div class="hint">بدون ثبت‌نام • رابط فارسی • مناسب اندروید</div>
+      </div>
+      <div class="visual" aria-label="پیش‌نمایش اپلیکیشن">
+        <div class="orb"></div><div class="ring r1"></div><div class="ring r2"></div>
+        <div class="wave left"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="phone"><div class="screen"><div class="toprow"><span>اکنون در حال پخش</span><span>•••</span></div><div class="cover"></div><div class="track"><b>موجِ شب</b><span>هنرمند منتخب</span></div><div class="progress"><i></i></div><div class="toprow"><span>۲:۴۸</span><span>۴:۱۲</span></div><div class="controls"><span>↻</span><span>◀</span><span class="play">▶</span><span>▶</span><span>♡</span></div></div></div>
+        <div class="wave right"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+
+    <section id="features"><div class="container"><div class="section-head"><h2>همه‌چیز برای یک پخش روان 🎧</h2><p>تمرکز روی چیزهایی که واقعاً در یک موزیک پلیر روزمره لازم داری؛ سریع، خلوت و بدون پیچیدگی.</p></div><div class="grid">
+      <article class="card"><div class="ico">▶</div><h3>پخش در پس‌زمینه</h3><p>حتی بعد از بستن صفحه، موسیقی ادامه پیدا می‌کند و کنترل پخش همیشه در دسترس است.</p></article>
+      <article class="card"><div class="ico">🔔</div><h3>کنترل از اعلان</h3><p>پخش، توقف و جابه‌جایی آهنگ‌ها از نوتیفیکیشن با دسترسی سریع.</p></article>
+      <article class="card"><div class="ico">⌕</div><h3>جستجوی سریع</h3><p>آهنگ، آلبوم و هنرمند را با یک جستجوی سریع پیدا کن.</p></article>
+      <article class="card"><div class="ico">♫</div><h3>صفحه هنرمند</h3><p>با لمس نام خواننده، همه آهنگ‌های همان هنرمند را یکجا ببین.</p></article>
+      <article class="card"><div class="ico">≡</div><h3>پلی‌لیست‌های شخصی</h3><p>موسیقی‌هایت را مرتب کن و پلی‌لیست‌های دلخواهت را بساز.</p></article>
+      <article class="card"><div class="ico">✦</div><h3>طراحی مدرن</h3><p>رابط کاربری مینیمال با تمرکز روی کاور، موسیقی و کنترل‌های ضروری.</p></article>
+    </div></div></section>
+
+    <section id="download"><div class="container"><div class="section-head"><h2>دانلود Mojapp</h2><p>روش دلخواهت را انتخاب کن. لینک‌ها از بخش تنظیمات پایین همین فایل قابل تغییر هستند.</p></div><div class="download-box">
+      <a id="directBtn" class="store" href="#"><span><strong>دانلود مستقیم</strong><small>فایل APK آخرین نسخه</small></span><span class="store-badge">↓</span></a>
+      <a id="myketBtn" class="store" href="#"><span><strong>دانلود از مایکت</strong><small>نسخه رسمی فروشگاه</small></span><span class="store-badge">M</span></a>
+      <a id="bazaarBtn" class="store" href="#"><span><strong>دانلود از کافه بازار</strong><small>نسخه رسمی فروشگاه</small></span><span class="store-badge">B</span></a>
+    </div></div></section>
+
+    <section id="faq"><div class="container"><div class="section-head"><h2>سوال‌های پرتکرار</h2></div><div class="faq">
+      <details><summary>برای استفاده از Mojapp نیاز به ثبت‌نام دارم؟</summary><p>خیر؛ ساختار صفحه دانلود و تجربه اپ بر استفاده سریع و ساده تمرکز دارد.</p></details>
+      <details><summary>نسخه جدید را از کجا دانلود کنم؟</summary><p>از همین صفحه می‌توانی نسخه مستقیم یا نسخه فروشگاه‌های مایکت و کافه بازار را دریافت کنی.</p></details>
+      <details><summary>اگر لینک دانلود هنوز فعال نباشد چه می‌شود؟</summary><p>تا قبل از قرار گرفتن فایل APK یا لینک فروشگاه، دکمه مربوطه به‌صورت غیرفعال نمایش داده می‌شود.</p></details>
+    </div></div></section>
+
+    <section><div class="container"><div class="cta"><h2>موسیقی‌ات را با Mojapp بشنو 🎶</h2><p>یک تجربه خلوت، سریع و مدرن برای هر روز.</p><a class="btn primary" href="#download">انتخاب روش دانلود</a></div></div></section>
+  </main>
+
+  <footer><div class="container footer"><span>© Mojapp — همه حقوق محفوظ است.</span><span>طراحی شده برای تجربه بهتر موسیقی</span></div></footer>
+
+  <script>
+    // فقط این سه مقدار را بعد از آماده شدن لینک‌های واقعی تغییر بده.
+    const DOWNLOAD_LINKS = {
+      direct: '',
+      myket: '',
+      bazaar: ''
+    };
+    const map={directBtn:DOWNLOAD_LINKS.direct,myketBtn:DOWNLOAD_LINKS.myket,bazaarBtn:DOWNLOAD_LINKS.bazaar};
+    Object.entries(map).forEach(([id,url])=>{const el=document.getElementById(id);if(url){el.href=url;el.target='_blank';el.rel='noopener'}else{el.classList.add('disabled');el.setAttribute('aria-disabled','true');el.addEventListener('click',e=>e.preventDefault())}});
+    if(DOWNLOAD_LINKS.direct){document.getElementById('directTop').href=DOWNLOAD_LINKS.direct;document.getElementById('directTop').target='_blank'}
+  </script>
+</body>
+</html>
